@@ -1,25 +1,43 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Bubble_Sort {
+public class Optimized_Bubble_Sort {
     public static int[] bubbleSort(int[] intArr, int intElements){
         int[] intCopy = Arrays.copyOf(intArr, intElements);
+        int intMag = intElements;
+        int intTurn = 1;
         boolean flag;
         printArray("Unsorted Array", intArr, intElements);
-        for(int i = 0; i < intElements; i++){
+
+        while (intMag > 1){
+            int intTracker = 0;
+            int intRef = 0;
             flag = false;
-            for(int j = 0; j < intElements - i - 1; j++){
-                if(intCopy[j] > intCopy[j + 1]){
-                    int Temp = intCopy[j];
-                    intCopy[j] = intCopy[j + 1];
+            for(int j = 0; j < intMag - 1; j++){
+                if(intCopy[intRef] > intCopy[j + 1]){
+                    int Temp = intCopy[intTracker];
+                    intCopy[intTracker] = intCopy[j + 1];
                     intCopy[j + 1] = Temp;
-                    flag = true;
+
+                    intRef++;
+                    intTracker++;
+                } else if(intCopy[intRef] == intCopy[j + 1]){
+                    intRef = j + 1;
+                } else {
+                    intRef = j + 1;
+                    intTracker = j + 1;
                 }
+                if(flag == false){
+                    return intCopy;
+                }
+                printArray("", intCopy, intElements);
             }
-            if(flag == false){
-                return intCopy;
-            }
-            printArray("Turn " + String.format("%d", i + 1), intCopy, intElements);
+
+            int intNSize = (intRef - intTracker) + 1;
+            if(intNSize <= 0) break;
+            intMag = intMag - intNSize;
+            printArray("Turn " + String.format("%d", intTurn), intCopy, intElements);
+            intTurn++;
         }
         return intCopy;
     }

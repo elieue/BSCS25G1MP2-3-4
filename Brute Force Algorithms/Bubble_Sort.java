@@ -53,8 +53,6 @@ public class Bubble_Sort {
                     intArr[intIndex] = scanInput.nextInt();
                 }
                 intArr = bubbleSort(intArr, intElements);
-
-                printArray("", intArr, intElements);
             } else { System.out.println("Invalid input. Please try again."); }
 
             System.out.println("Do you want to try again? [Y/N]");

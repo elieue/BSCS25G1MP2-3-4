@@ -1,26 +1,17 @@
-import java.util.*; //TODO: MAKE OPTIMIZATION HOLD ON KUMAKAIN 
+import java.util.*;
 
 public class KSP_Optimized {
     static Scanner objScanner = new Scanner(System.in);
 
-    public static int funcKnapSackRecursive(int intCapacity, int[] intArrVal, int[] intArrWeight, int intArraySize) {
-        if (intArraySize == 0 || intCapacity == 0) return 0; // If there's nothing else to grab or if the knapsack is full, return
-
-        int intChosen = 0; // Chosen Item
-
-        // Picks the n'th item if it does not exceed the capacity of knapsack, recursively checks again with reduced space and selection
-        if (intArrWeight[intArraySize - 1] <= intCapacity) intChosen = intArrVal[intArraySize - 1] + funcKnapSackRecursive(intCapacity - intArrWeight[intArraySize - 1], intArrVal, intArrWeight, intArraySize - 1);
-        
-        // Checks and goes over to the path that is not chosen if there are better options
-        int intNotChosen = funcKnapSackRecursive(intCapacity, intArrVal, intArrWeight, intArraySize - 1);
-        
-        // Picks which between the chosen and not chosen in the current call is greater 
-        return Math.max(intChosen, intNotChosen);
-    }
-
     public static int funcKnapSack(int intCapacity, int[] intArrVal, int[] intArrWeight) {
-        int intArraySize = intArrVal.length;
-        return funcKnapSackRecursive(intCapacity, intArrVal, intArrWeight, intArraySize);
+        int[] intArrayDP = new int[intCapacity + 1]; // Dynamic programming :D
+        
+        for (int i = 1; i <= intArrWeight.length; i++) { // Go over to our weight table 
+            for (int j = intCapacity; j >= intArrWeight[i - 1]; j--) { // Start from the rightmost part to check i-1 solutions
+                intArrayDP[j] = Math.max(intArrayDP[j], intArrayDP[j - intArrWeight[i - 1]] + intArrVal[i - 1]); // Check between which items to take to add to our dp array, just index j is the dont take item route and the other is one where we pick the better item than index j. 
+            }
+        }
+        return intArrayDP[intCapacity]; // After checking every route, return the last value which should be the best value you will get from the selection of items.
     }
 
     public static int funcIntOption(String strPrompt) {

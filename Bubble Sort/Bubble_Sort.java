@@ -11,10 +11,10 @@ public class Bubble_Sort {
                     int Temp = intCopy[j];
                     intCopy[j] = intCopy[j + 1];
                     intCopy[j + 1] = Temp;
-                    flag = true;
                 }
+                printArray("", intCopy, intElements);
             }
-            printArray("Turn " + String.format("%d", i + 1), intCopy, intElements);
+            printArray("Turn " + (i+1), intCopy, intElements);
         }
         return intCopy;
     }
@@ -47,7 +47,9 @@ public class Bubble_Sort {
                 for(int intIndex = 0; intIndex < intElements; intIndex++){
                     intArr[intIndex] = scanInput.nextInt();
                 }
+                System.out.println("=========================================================");
                 intArr = bubbleSort(intArr, intElements);
+                System.out.println("=========================================================");
             } else { System.out.println("Invalid input. Please try again."); }
 
             System.out.println("Do you want to try again? [Y/N]");

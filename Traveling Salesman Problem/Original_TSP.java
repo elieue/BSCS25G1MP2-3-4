@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TravelingSalesman {
+public class Original_TSP {
     private static int[][] arrCityDistances;
     private static int[] arrBestTour, arrCurrentTour;
     private static boolean[] boolVisited;
@@ -48,7 +48,7 @@ public class TravelingSalesman {
         int intCityNumber;
 
         while (true) {
-            System.out.print("How many Cities do you want to visit? : ");
+            System.out.print("How many Cities do you want to visit?: ");
 
             if (!scnInput.hasNextInt()) {
                 System.out.println("Error: Please enter an integer.");
@@ -72,7 +72,7 @@ public class TravelingSalesman {
         int intStartingCity;
 
         while (true) {
-            System.out.print("Enter the starting city (0 to " + (intCityNumber - 1) + "): ");
+            System.out.print("\nEnter the starting city (0 to " + (intCityNumber - 1) + "): ");
 
             if (!scnInput.hasNextInt()) {
                 System.out.println("Error: Please enter an integer.");

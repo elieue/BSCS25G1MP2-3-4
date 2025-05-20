@@ -21,22 +21,23 @@ public class Optimized_Bubble_Sort {
 
                     intRef++;
                     intTracker++;
+                    flag = true;
                 } else if(intCopy[intRef] == intCopy[j + 1]){
                     intRef = j + 1;
                 } else {
                     intRef = j + 1;
                     intTracker = j + 1;
                 }
-                if(flag == false){
-                    return intCopy;
-                }
                 printArray("", intCopy, intElements);
             }
 
             int intNSize = (intRef - intTracker) + 1;
             if(intNSize <= 0) break;
+            if(flag == false){
+                return intCopy;
+            }
             intMag = intMag - intNSize;
-            printArray("Turn " + String.format("%d", intTurn), intCopy, intElements);
+            printArray("Turn " + intTurn, intCopy, intElements);
             intTurn++;
         }
         return intCopy;
@@ -70,7 +71,9 @@ public class Optimized_Bubble_Sort {
                 for(int intIndex = 0; intIndex < intElements; intIndex++){
                     intArr[intIndex] = scanInput.nextInt();
                 }
+                System.out.println("=========================================================");
                 intArr = bubbleSort(intArr, intElements);
+                System.out.println("=========================================================");
             } else { System.out.println("Invalid input. Please try again."); }
 
             System.out.println("Do you want to try again? [Y/N]");

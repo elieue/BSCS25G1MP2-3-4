@@ -30,7 +30,6 @@ public class Optimized_Bubble_Sort {
                 if(flag == false){
                     return intCopy;
                 }
-                printArray("", intCopy, intElements);
             }
 
             int intNSize = (intRef - intTracker) + 1;

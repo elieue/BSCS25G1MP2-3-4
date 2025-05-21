@@ -1,4 +1,3 @@
-package AlgoforDaSeat.Original;
 import java.util.Scanner;
 
 public class Travelling_Salesman {

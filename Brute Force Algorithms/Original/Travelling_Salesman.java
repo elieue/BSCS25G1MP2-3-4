@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Travelling_Salesman {
     private static int[][] arrCityDistances;

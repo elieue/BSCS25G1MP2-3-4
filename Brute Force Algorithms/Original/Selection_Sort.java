@@ -1,4 +1,3 @@
-package AlgoforDaSeat.Original;
 import java.util.*;
 
 public class Selection_Sort{

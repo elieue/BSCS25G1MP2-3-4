@@ -1,6 +1,4 @@
-package AlgoforDaSeat.Original;
-import java.util.Scanner;
-
+import java.util.*;
 public class Travelling_Salesman {
     private static int[][] arrCityDistances;
     private static int[] arrBestTour, arrCurrentTour;

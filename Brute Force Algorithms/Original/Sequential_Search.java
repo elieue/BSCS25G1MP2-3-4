@@ -1,5 +1,4 @@
-package AlgoforDaSeat.Original;
-import java.util.Scanner;
+import java.util.*;
 
 public class Sequential_Search {
     public static void main(String[] args) {

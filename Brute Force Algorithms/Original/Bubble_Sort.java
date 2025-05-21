@@ -1,6 +1,4 @@
-package AlgoforDaSeat.Original;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class Bubble_Sort {
     public static int[] bubbleSort(int[] intArr, int intElements){

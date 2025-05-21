@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class Sequential_Search {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

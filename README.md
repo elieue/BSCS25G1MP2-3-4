@@ -1,7 +1,7 @@
-# 📌 Group Assignment Submission
+# 📌 Machine Problems
 
 ## 📝 Overview
-This README provides details on the inclusion of three machine problems for submission as group assignments. Each problem explores different algorithmic strategies, their applications, and limitations, ensuring a comprehensive understanding of computational problem-solving.
+This repository provides details on the inclusion of three machine problems for submission as group assignments. Each problem explores different algorithmic strategies, their applications, and limitations, ensuring a comprehensive understanding of computational problem-solving.
 
 ---
 

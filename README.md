@@ -36,12 +36,5 @@ This repository provides details on the inclusion of three machine problems for 
 
 ---
 
-## 📂 Submission Details
-- **Group Collaboration:** Each problem must be solved collectively, ensuring proper division of tasks among team members.
-- **Documentation:** The report should include algorithm explanations, pseudocode, complexity analysis, and sample implementations.
-- **Final Deliverable:** A compiled document containing solutions, discussions, and code implementations.
-
----
-
 ## ✅ Conclusion
 These machine problems provide an **in-depth study of different algorithmic paradigms**, enabling a deeper understanding of computational efficiency and problem-solving techniques. The comparative approach ensures that students develop a strong analytical foundation in selecting appropriate algorithms for different scenarios.
